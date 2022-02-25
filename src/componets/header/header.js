@@ -5,9 +5,9 @@ import profile from "../../assets/Images/Mohan-muruge.jpg"
 
 function Header() {
     return (
-        <div> 
+    <div> 
             <img src={logo} />
-            
+        <div className="header__wrapper">
             <div className="searchbar">
               <form className="searchbar__form">
                 <input 
@@ -24,6 +24,7 @@ function Header() {
             <button className="header__button">UPLOAD
             </button>
         </div>
+    </div>
     )
 }
 

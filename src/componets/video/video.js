@@ -1,10 +1,17 @@
 
 
 
-function Video(){
+function Video(props){
+
+
 
     return (
         <>
+        <video className="hero-player" poster="{}"> 
+
+
+
+        </video>
 
 
     </>
