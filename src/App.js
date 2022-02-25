@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './componets/header/header.js';
+import Video from './componets/video/video.js';
 import './App.scss';
 
-function App() {
+
+ class App extends React.Component {
+ 
+  //state = { }
+
+
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header className="App-header"/>
+      <Video />
     </div>
-  );
+  )};
 }
 
 export default App;
