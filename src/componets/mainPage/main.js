@@ -3,33 +3,32 @@ import VideoList from '../videoList/videoList';
 import CommentList from '../comments/commentsList'
 
 
-export default function Main({videosJson, currentVideo, handleVideoChange, videoinfo }) { 
+export default function Main({videosJson, currentVideo, handleVideoChange, videoInfo }) { 
 
-    console.log(videosJson)
+let clickedVideo = videosJson.find(video => video.id === currentVideo.id)
+
+
     return (
         <main className="app__page">
 
-
-            
-
             <div className="video-Player">
                 < Player 
-                currentVideo={currentVideo}
+                currentVideo={clickedVideo}
                 />
             </div>
             <div className='comments__number'>
-                {currentVideo.comments.length} comments
+                {clickedVideo.comments.length} comments
             </div>
 
             <div className='comments-list'>
                 <CommentList
-                commentList={currentVideo.comments}
+                commentList={clickedVideo.comments}
                 />
             </div>
 
             <div className='video__list'>
                 <VideoList 
-                videosJson={videosJson}
+                videosJson={videoInfo}
                 currentVideo={currentVideo}
                 handleVideoChange={handleVideoChange}
                 />

@@ -14,7 +14,7 @@ export default function ({video, handleVideoChange }){
             </div> 
 
             <div className="video-list__item--content">
-                <title className="video-list__item-title">{video.title}</title>
+                <h3 className="video-list__item-title">{video.title}</h3>
                 <p>{video.channel}</p>
             </div>
 
