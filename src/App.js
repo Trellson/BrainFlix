@@ -1,20 +1,21 @@
 import React from 'react';
-import Header from './componets/header/header.js';
-import Video from './componets/video/video.js';
+import Main from './componets/mainPage/main';
+import videosJson from "././assets/Data/video-details.json";
 import './App.scss';
 
 
  class App extends React.Component {
- 
-  //state = { }
+
+state= {videosJson : videosJson, currentVideo: videosJson[0]}
 
 
   render(){
   return (
-    <div className="App">
-      <Header className="App-header"/>
-      <Video />
-    </div>
+    <Main videosJson={this.state.videosJson}
+    currentVideo = {this.state.currentVideo}
+      
+
+    />
   )};
 }
 
