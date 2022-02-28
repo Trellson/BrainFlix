@@ -3,7 +3,8 @@ import './videoList.scss'
 
 
 export default function VideoList({ currentVideo, videosJson , handleVideoChange   }) {
-        return(
+        
+    return(
             <section className="video-list">
                 <h3 className="video-list__header">Next Video</h3>
                 <ul className="video-list__list">
@@ -11,13 +12,9 @@ export default function VideoList({ currentVideo, videosJson , handleVideoChange
                     .filter(video => video.id !== currentVideo.id)
                     .map(video => {
                         return (
-                            <Video
-                            key={video.id}
-                            id={video.id}
-                            title={video.id}
-                            channel={video.id}
-                            handlevideoChange={handleVideoChange}
-                            />
+                            <div key={video.id}>
+                    
+                            </div>
                         )
                 })}
 

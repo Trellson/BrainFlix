@@ -1,5 +1,4 @@
-import Comments from '../Video/currentVideoPlayer'
-import video from '../Video/currentVideoPlayer'
+import SingleComment from '../comments/comment'
 import './comments.scss'
 
 
@@ -10,7 +9,7 @@ export default function CommentList({commentList }) {
                    {commentList
                    .map((comment, index ) => {
                         return (
-                            <Comments 
+                            <SingleComment 
                             key={index}
                             name={comment.name}
                             date={comment.timestamp}
