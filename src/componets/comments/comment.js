@@ -1,9 +1,9 @@
 
 
 
-export default function (props){
+export default function ({name, date, comment}){
 
-console.log(props)
+
 
     return(
         <div className="comment__component">
@@ -12,14 +12,14 @@ console.log(props)
             <div className="comment__component--content">
                 <div className="comment__component--content-header">
                     <div className="comment__component--content-name">
-                        {props.name}
+                        {name}
                     </div>
                     <div className="comment__component--content-date">
-                        {props.date}
+                    {new Date(date).toLocaleDateString()}
                     </div>
                 </div>
                 <div className="comment__component--content-comment">
-                    {props.comment}
+                    {comment}
                 </div>
             </div>
         </div>

@@ -3,9 +3,9 @@ import VideoList from '../videoList/videoList';
 import CommentList from '../comments/commentsList'
 
 
-export default function Main({videosJson, currentVideo }) { // { videosJson: 'something' }
+export default function Main({videosJson, currentVideo, handleVideoChange, videoinfo }) { 
 
-    console.log(currentVideo)
+    console.log(videosJson)
     return (
         <main className="app__page">
 
@@ -17,18 +17,21 @@ export default function Main({videosJson, currentVideo }) { // { videosJson: 'so
                 currentVideo={currentVideo}
                 />
             </div>
-
+            <div className='comments__number'>
+                {currentVideo.comments.length} comments
+            </div>
 
             <div className='comments-list'>
                 <CommentList
                 commentList={currentVideo.comments}
                 />
             </div>
-            
+
             <div className='video__list'>
                 <VideoList 
                 videosJson={videosJson}
                 currentVideo={currentVideo}
+                handleVideoChange={handleVideoChange}
                 />
             </div>
 
