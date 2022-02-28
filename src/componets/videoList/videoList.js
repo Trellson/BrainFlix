@@ -11,7 +11,13 @@ export default function VideoList({ currentVideo, videosJson , handleVideoChange
                     .filter(video => video.id !== currentVideo.id)
                     .map(video => {
                         return (
-                            <></>
+                            <Video
+                            key={video.id}
+                            id={video.id}
+                            title={video.id}
+                            channel={video.id}
+                            handlevideoChange={handleVideoChange}
+                            />
                         )
                 })}
 
