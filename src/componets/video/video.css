@@ -1,0 +1,26 @@
+video {
+  width: 100%;
+}
+
+.hero__container {
+  margin: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.hero__player--icons {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem;
+  border-bottom: #e1e1e1 1px solid;
+}
+.hero__player--description {
+  margin: 0 1rem;
+}
+
+.views, .likes {
+  display: flex;
+  align-items: center;
+}
+
+.channel--date {
+  margin-right: 7rem;
+}/*# sourceMappingURL=video.css.map */
