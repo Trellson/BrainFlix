@@ -1,40 +1,61 @@
-div {
-    padding: .4rem;
-    
-}
-
 .header{
 
     &__wrapper{
         background: #fff;
-        border-bottom: 1px black solid;
+       
+    }
+
+    &__container{
+        display: flex;
+        flex-direction:column;
+        align-content: center;
+    }
+    &__logo{
+        padding:1rem 0;
+        position:relative;
+        left: 10.5rem;
+        width: fit-content;
     }
 
     &__button{
-        width: 13.5rem;
-    height: 2rem;
-    border-radius: 5px;
-    background-color: #0095FF;
-    border-color: #0095FF;
-    color: #fff;
-    font-weight: 600;
-    border-style: solid;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 23.5rem;
+        height: 3rem;
+        border-radius: 4px;
+        background-color: #0095FF;
+        border-color: #0095FF;
+        color: #fff;
+        font-weight: 600;
+        border-style: solid;
+        margin: 1rem 0;
+
+    &--sticker{
+        position: relative;
+        right: 137px;
+    }
+
+      &--wrapper{
+display: flex;
+justify-content: center ;
+      }
     }
 }
 
 .searchbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  
     
-    &__form{
-    
-    }
-
     &__input{
         background-color: #fafafa;
-        height: 1.5rem;
+        height: 2rem;
         border: 1px solid #e1e1e1;
         border-radius: 4px;
+        width: 200px;
+        padding-right: 7.5rem;
+        margin-right: 1rem;
     }
 
     &__photo{

@@ -15,12 +15,11 @@ replaceVideo(newVideo){
 
   render(){
   return (
+ 
     <Main videosJson={videosJson}
     currentVideo = {this.state.currentVideo}
     handleVideoChange = {this.replaceVideo.bind(this)}
     videoInfo = {videoInfo}
-      
-
     />
   )};
 }

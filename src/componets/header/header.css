@@ -1,31 +1,54 @@
-div {
-  padding: 0.4rem;
-}
-
 .header__wrapper {
   background: #fff;
-  border-bottom: 1px black solid;
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.header__logo {
+  padding: 1rem 0;
+  position: relative;
+  left: 10.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .header__button {
-  width: 13.5rem;
-  height: 2rem;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23.5rem;
+  height: 3rem;
+  border-radius: 4px;
   background-color: #0095FF;
   border-color: #0095FF;
   color: #fff;
   font-weight: 600;
   border-style: solid;
+  margin: 1rem 0;
+}
+.header__button--sticker {
+  position: relative;
+  right: 137px;
+}
+.header__button--wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .searchbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .searchbar__input {
   background-color: #fafafa;
-  height: 1.5rem;
+  height: 2rem;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
+  width: 200px;
+  padding-right: 7.5rem;
+  margin-right: 1rem;
 }
 .searchbar__photo {
   border-radius: 100%;
