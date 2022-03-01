@@ -1,4 +1,4 @@
-
+import "./videoListItems.scss";
 
 
 export default function ({video, handleVideoChange }){
