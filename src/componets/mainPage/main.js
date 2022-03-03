@@ -1,4 +1,4 @@
-import Player from '../Video/currentVideoPlayer.js';
+import Player from '../currentVideoPlayer/currentVideoPlayer.js';
 import VideoList from '../videoList/videoList';
 import CommentList from '../comments/commentsList';
 import Header from '../Header/Header.js'
