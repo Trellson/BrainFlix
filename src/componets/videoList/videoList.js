@@ -1,15 +1,15 @@
 
-import Video from "../Video/video"
+import Video from "../video/video"
 import './videoList.scss'
 
 
-export default function VideoList({ currentVideo, videosJson , handleVideoChange   }) {
+export default function VideoList({ currentVideo, allVideos , handleVideoChange   }) {
         
     return(
             <section className="video-list">
                 <h4 className="video-list__header">Next Videos</h4>
                 <ul className="video-list__list">
-                    {videosJson
+                    {allVideos
                     .filter(video => video.id !== currentVideo.id)
                     .map(video => {
                         return (
