@@ -5,35 +5,49 @@ import Header from '../header/header.js'
 import React from 'react';
 import axios from 'axios';
 
+const api_key = "b601a94b-cfe4-4596-b78a-0a0c620eb96e";
+const axiosURL = "https://project-2-api.herokuapp.com";
+
+
 
 class Main extends React.Component { 
-    api_key = "b601a94b-cfe4-4596-b78a-0a0c620eb96e"
-    axiosURL = "https://project-2-api.herokuapp.com"
-state = {
-    currentVideo: null,
-    currentVideoComments: []
-}
-    componentDidMount(){
 
-      let currentVideo =this.props.allVideos[0];
-      axios.get(this.axiosURL+"/videos/"+currentVideo.id+"?api_key="+this.api_key).then((response) => {
-          
-          const videoData = response.data;
-        this.setState({
-          currentVideo: videoData,
-          currentVideoComments: videoData.comments
+    state= {currentVideo: {},
+    allVideos:[],
+     videoInfo:{},
+    currentVideoComments:[]}
 
+
+     currentVideoDetails = (id) => {
+console.log(id)
+        
+        axios.get(axiosURL+"/videos/"+id+"?api_key="+api_key).then((response) => {
+            
+            const videoData = response.data;
+          this.setState({
+            currentVideo: videoData,
+            currentVideoComments: videoData.comments
+  
+          })
         })
-      })
-    }
+      }
+
+  componentDidMount(){
+  axios.get(`https://project-2-api.herokuapp.com/videos?api_key=b601a94b-cfe4-4596-b78a-0a0c620eb96e`).then((response) => { 
+    console.log(response.data)
+    this.setState({
+      allVideos: response.data   
+    })
+    this.currentVideoDetails(response.data[0].id)
+  })
+}
+  
+    
 
 
 render(){
     console.log(this.state.currentVideo)
     
-    const {  allVideos } = this.props
-
-
     return (
          
         <main className="app__page">
@@ -61,9 +75,9 @@ render(){
 
             <div className='video__list'>
                 <VideoList 
-                allVideos={allVideos}
+                allVideos={this.state.allVideos}
                 currentVideo={this.state.currentVideo}
-                handleVideoChange={null}
+                handleVideoChange={this.currentVideoDetails}
                 />
             </div>
 

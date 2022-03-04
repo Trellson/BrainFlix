@@ -7,7 +7,7 @@ export default function ({video, handleVideoChange }){
 
     return(
         <div className="video-list__item"
-            onClick= {() => handleVideoChange(video)} > 
+            onClick= {() => handleVideoChange(video.id)} > 
 
             <div className="video-list__item--thumbnail">
                 <img src={video.image} alt={video.title}></img>
