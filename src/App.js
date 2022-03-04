@@ -1,4 +1,4 @@
-import Main from './componets/mainPage/main';
+import Home from './componets/home/home';
 import './App.scss';
 
 
@@ -10,7 +10,7 @@ export default function App() {
   
   return (
  
-    < Main />
+    < Home />
   );
 }
 

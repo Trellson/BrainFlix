@@ -10,7 +10,7 @@ const axiosURL = "https://project-2-api.herokuapp.com";
 
 
 
-class Main extends React.Component { 
+class Home extends React.Component { 
 
     state= {currentVideo: {},
     allVideos:[],
@@ -86,4 +86,4 @@ render(){
 }
 }
 
-export default Main;
+export default Home;
