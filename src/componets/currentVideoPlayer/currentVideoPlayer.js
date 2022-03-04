@@ -6,8 +6,6 @@ import views from '../../assets/Icons/views.svg';
 
 export default function Video({currentVideo}){
 
-    console.log(currentVideo)
-
     return (
         <div className="hero" >
             <video className="hero__player" poster={currentVideo.image}>

@@ -19,7 +19,6 @@ class Home extends React.Component {
 
 
      currentVideoDetails = (id) => {
-console.log(id)
         
         axios.get(axiosURL+"/videos/"+id+"?api_key="+api_key).then((response) => {
             
@@ -34,7 +33,6 @@ console.log(id)
 
   componentDidMount(){
   axios.get(`https://project-2-api.herokuapp.com/videos?api_key=b601a94b-cfe4-4596-b78a-0a0c620eb96e`).then((response) => { 
-    console.log(response.data)
     this.setState({
       allVideos: response.data   
     })
@@ -46,8 +44,6 @@ console.log(id)
 
 
 render(){
-    console.log(this.state.currentVideo)
-    
     return (
          
         <main className="app__page">
