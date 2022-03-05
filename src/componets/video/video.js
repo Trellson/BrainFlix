@@ -1,13 +1,14 @@
+import {Link} from "react-router-dom";
 import "./videoListItems.scss";
 
 
-export default function ({video, handleVideoChange }){
+export default function ({video}){
 
 
 
     return(
-        <div className="video-list__item"
-            onClick= {() => handleVideoChange(video.id)} > 
+        <Link className="video-list__item"
+            to={`/video/${video.id}`} > 
 
             <div className="video-list__item--thumbnail">
                 <img src={video.image} alt={video.title}></img>
@@ -17,8 +18,8 @@ export default function ({video, handleVideoChange }){
                 <h3 className="video-list__item-title">{video.title}</h3>
                 <p>{video.channel}</p>
             </div>
-
-        </div>
+        </Link>
+        
     
     );
 

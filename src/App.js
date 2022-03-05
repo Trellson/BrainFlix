@@ -1,11 +1,10 @@
 import Home from './componets/home/home';
 import './App.scss';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 
-export default function App() {
+ function App() {
    
   
   return (
@@ -20,3 +19,4 @@ export default function App() {
   );
 }
 
+export default App;

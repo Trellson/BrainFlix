@@ -28,6 +28,7 @@ class Home extends React.Component {
             currentVideoComments: videoData.comments
   
           })
+          .catch(err => console.log(err))
         })
       }
 
@@ -38,8 +39,17 @@ class Home extends React.Component {
     })
     this.currentVideoDetails(response.data[0].id)
   })
+  .catch(err => console.log(err))
 }
+
+componentDidUpdate(prevProps, prevState){
   
+  const videoId = this.props.match.params.videoId || this.state.allVideos[0].id;
+  
+  if (prevState.currentVideo && prevState.currentVideo.id !== videoId){
+    this.currentVideoDetails(videoId)
+  }
+}
     
 
 
@@ -73,7 +83,6 @@ render(){
                 <VideoList 
                 allVideos={this.state.allVideos}
                 currentVideo={this.state.currentVideo}
-                handleVideoChange={this.currentVideoDetails}
                 />
             </div>
 

@@ -3,7 +3,7 @@ import Video from "../video/video"
 import './videoList.scss'
 
 
-export default function VideoList({ currentVideo, allVideos , handleVideoChange   }) {
+export default function VideoList({ currentVideo, allVideos    }) {
         
     return(
             <section className="video-list">
@@ -15,7 +15,6 @@ export default function VideoList({ currentVideo, allVideos , handleVideoChange 
                         return (
                             <Video 
                             key={video.id} 
-                            handleVideoChange={handleVideoChange}
                             video= {video}
                             />
                     
