@@ -1,6 +1,6 @@
 import Player from '../currentVideoPlayer/currentVideoPlayer.js';
 import VideoList from '../videoList/videoList';
-import CommentList from '../comments/commentsList';
+import CommentList from '../commentsList/commentsList';
 import Header from '../header/header.js'
 import React from 'react';
 import axios from 'axios';
