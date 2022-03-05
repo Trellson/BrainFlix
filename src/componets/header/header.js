@@ -25,9 +25,11 @@ function Header() {
                 <img className="searchbar__photo" src={profile} alt="alt"/>
             </div>
             <div className="header__button--wrapper">
-               <button className="header__button">
-               <img className="header__button--sticker" src={upload} alt="face"/> UPLOAD
-            </button>
+                <Link to= {`/upload`}>
+                  <button className="header__button">
+                     <img className="header__button--sticker" src={upload} alt="face"/> UPLOAD
+                  </button>
+                </Link>
             </div>
         </div>
     </div>
