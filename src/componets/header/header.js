@@ -3,12 +3,16 @@ import  "./header.scss"
 import logo from "../../assets/Logo/BrainFlix-logo.svg"
 import profile from "../../assets/Images/Mohan-muruge.jpg"
 import upload from "../../assets/Icons/upload.svg"
+import {Link} from "react-router-dom";
 //import glass from "../../assets/Icons/search.svg"
 
 function Header() {
     return (
     <div className="header__container"> 
-            <img className="header__logo" src={logo} alt="logo" />
+        
+        <Link to= {`/`}>
+        <img className="header__logo" src={logo} alt="logo" />
+        </Link>
         <div className="header__wrapper">
             <div className="searchbar">
             <form className="searchbar__form">
