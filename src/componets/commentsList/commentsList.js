@@ -1,5 +1,5 @@
 import SingleComment from '../comments/comment'
-import './comments.scss'
+import '../comments/comments.scss'
 
 
 export default function CommentList({commentList }) { 
