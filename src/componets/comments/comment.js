@@ -1,4 +1,5 @@
-
+import "./comments.scss";
+import photo from "../../assets/Images/Mohan-muruge.jpg";
 
 
 export default function ({name, date, comment}){
@@ -8,6 +9,7 @@ export default function ({name, date, comment}){
     return(
         <div className="comment__component">
             <div className="comment__component--photo">
+                <img className="comment__pic" src={photo} alt photo></img>
             </div>
             <div className="comment__component--content">
                 <div className="comment__component--content-header">

@@ -1,5 +1,5 @@
-import Home from './componets/home/home';
-import Upload from './componets/upload/upload';
+import Home from './pages/home/home';
+import UploadPage from './componets/upload/UploadPage';
 import './App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -11,8 +11,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
   return (
           <BrowserRouter>
               <Switch>
-                <Route path= "/" exact component ={Home} />
-                <Route path= "/upload" component ={Upload} />
+                <Route path= "/" exact component={Home} />
+                <Route path= "/upload" component={UploadPage} />
                 <Route path= "/video/:videoId" component={Home} />
               </Switch>
           </BrowserRouter>

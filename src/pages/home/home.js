@@ -1,7 +1,9 @@
-import Player from '../currentVideoPlayer/currentVideoPlayer.js';
-import VideoList from '../videoList/videoList';
-import CommentList from '../commentsList/commentsList';
-import Header from '../header/header.js'
+import Player from '../../componets/currentVideoPlayer/currentVideoPlayer.js';
+import VideoList from '../../componets/videoList/videoList';
+import CommentList from '../../componets/commentsList/commentsList';
+import Header from '../../componets/header/header.js'
+import CommentsForm from "../../componets/commentsForm/commentsForm.js";
+import '../../componets/commentsList/commentsList.scss';
 import React from 'react';
 import axios from 'axios';
 
@@ -66,19 +68,21 @@ render(){
                 currentVideo={this.state.currentVideo}
                 />
             </div>
+
+            <section className='comments__container'>
             <div className='comments__number'>
                 {this.state.currentVideoComments.length} comments
             </div>
             <div className='comments__form'>
-
+                  <CommentsForm />
             </div>
 
-            <div className='comments-list'>
+            <div className='comments__list'>
                 <CommentList
                 commentList={this.state.currentVideoComments}
                 />
             </div>
-
+            </section>
             <div className='video__list'>
                 <VideoList 
                 allVideos={this.state.allVideos}

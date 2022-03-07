@@ -1,0 +1,31 @@
+.comments{
+    &__container{
+        margin: 1rem;
+    }
+    &__form{
+        border-bottom: 1px solid #afafaf;
+        display:flex;
+        flex-direction: column;
+    }
+    &__textarea{
+        border: #afafaf;
+        background-color: #e1e1e1
+    }
+}
+.comment__component{
+    margin: 1rem 0;
+    border-bottom: 1px solid #e1e1e1;
+    &--content{
+        display:flex;
+        flex-direction: column;
+        &-header{
+            display:flex;
+            justify-content: space-between;
+            margin: 0 0 .675rem 0;
+        }
+        &-comment{
+            margin: 0 0 1rem 0;
+        }
+    }
+}
+
