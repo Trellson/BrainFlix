@@ -22,10 +22,12 @@ export default function UploadPage(){
 
             <div className="upload-container">
                   <form className="upload-container__form">
-                    <label className="upload-container__form--title-label">Title Your Video</label>
-                    <input className="upload-container__form--title-box" type="text" placeholder="Add a title to your video"/>
-                    <label className="upload-container__form--discription-label">Add A Video Description</label>
-                    <textarea className="upload-container__form--discrpition-box" type="text" placeholder="Add a description to your video"></textarea>
+                    <div className="upload-container__form--container">
+                      <label className="upload-container__form--title-label">Title Your Video</label>
+                      <input className="upload-container__form--title-box" type="text" placeholder="Add a title to your video"/>
+                      <label className="upload-container__form--discription-label">Add A Video Description</label>
+                      <textarea className="upload-container__form--description-box" type="text" placeholder="Add a description to your video"></textarea>
+                    </div>
                     <div className="header__button--wrapper">
                         <button className="header__button">
                             <img className="header__button--sticker" src={UploadIcon} alt="face"/> PUBLISH
