@@ -2,6 +2,7 @@
 
     &__wrapper{
         background: #fff;
+        padding: 0 1rem;
        
     }
 
@@ -12,9 +13,6 @@
     }
     &__logo{
         padding:1rem 0;
-        position:relative;
-        left: 10.5rem;
-        width: fit-content;
     }
 
     &__button{
