@@ -1,4 +1,5 @@
 import Player from "../../componets/currentVideoPlayer/currentVideoPlayer.js";
+import PlayerInfo from "../../componets/currentVideoInfo/currentVideoInfo.js";
 import VideoList from "../../componets/videoList/videoList";
 import CommentList from "../../componets/commentsList/commentsList";
 import Header from "../../componets/header/header.js";
@@ -62,7 +63,9 @@ class Home extends React.Component {
         <div className="video-Player">
           <Player currentVideo={this.state.currentVideo} />
         </div>
-
+        <div className="video-Player__info">
+          <PlayerInfo currentVideo={this.state.currentVideo} />
+        </div>
         <section className="comments__container">
           <div className="comments__number">
             {this.state.currentVideoComments.length} comments

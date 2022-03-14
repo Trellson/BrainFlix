@@ -22,9 +22,9 @@ function Header() {
               className="header__input"
               placeholder="Search"
             />
-          </form>
           <img className="header__avatar header__avatar--mobile" src={profile} alt="user" />
-          <Link to={`/upload`}>
+          </form>
+          <Link className="header__link" to={`/upload`}>
             <button className="header__button">
               <img
                 className="header__button--sticker"

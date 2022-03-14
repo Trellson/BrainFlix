@@ -1,25 +1,93 @@
+@use "../../styles/partials/_mixins" as *;
+
+
 .header{
 
     &__wrapper{
-        background: #fff;
         padding: 0 1rem;
-       
+
+        @include tablet{
+            padding: 0 2.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @include desktop{
+            padding: 0;
+            max-width: 1064px;
+            margin: 0 auto;
+        }
     }
 
-    &__container{
+    &__container-left{
         display: flex;
-        flex-direction:column;
-        align-content: center;
+        justify-content: center;
+    }
+    &__container-right{
+        @include tablet{
+            display: flex;
+        align-items: center;
+        }
     }
     &__logo{
         padding:1rem 0;
+        height: 1.625rem;
+    }
+    &__form{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 1rem;
+        @include tablet{
+            padding: 0;        }
+    }
+    &__input{
+        font-family: avenir;
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 4px;
+        border: solid 1px #e1e1e1;
+        margin-right: 1rem;
+        @include tablet{
+            width: 15rem;
+            height: 2.5rem;
+        }
+
+    }
+    &__avatar{
+        height: 2.25rem;
+        width:2.25rem;
+        border-radius: 100%;
+        @include tablet{
+            height: 2.5rem;
+            width:2.5rem;
+        }
+        &--mobile{
+            @include tablet{
+                display: none;
+            }
+        }
+        &--tablet{
+            display: none;
+            @include tablet{
+                display:block;
+            }
+        }
+    }
+    &__link{
+        text-decoration: none;
+        @include tablet{
+        margin-right: 1rem;
+        }
     }
 
     &__button{
         display:flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        width: 23.5rem;
+        width: 100%;
         height: 3rem;
         border-radius: 4px;
         background-color: #0095FF;
@@ -29,36 +97,13 @@
         border-style: solid;
         margin: 1rem 0;
 
-    &--sticker{
-        position: relative;
-        right: 137px;
-    }
+        @include tablet{
+         width: 9.375rem;   
+        }
 
-      &--wrapper{
-display: flex;
-justify-content: center ;
-      }
+    &--sticker{
+        position: absolute;
+        left: 10px;
     }
 }
-
-.searchbar{
-    display: flex;
-    justify-content: center;
-  
-    
-    &__input{
-        background-color: #fafafa;
-        height: 2rem;
-        border: 1px solid #e1e1e1;
-        border-radius: 4px;
-        width: 200px;
-        padding-right: 7.5rem;
-        margin-right: 1rem;
-    }
-
-    &__photo{
-    border-radius: 100%;
-    height: 2rem;
-    width: 2rem;
-    }
 }

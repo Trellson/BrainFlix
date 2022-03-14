@@ -1,0 +1,56 @@
+.videoInfo{
+    font-family: avenir;
+
+    &__title {
+        margin: 1rem 1rem 1rem;
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &__icons{
+        display:flex;
+        margin: 1rem;
+        border-bottom: 1px solid #e1e1e1;
+
+        &--channel-date{
+            padding-right: 4rem;
+        }
+    }
+    &__description{
+        margin: 0 1rem;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+    }
+}
+.views{
+display: flex;
+    &__icon{
+        padding-right: 1rem;
+        align-content: center;
+    }
+    &__number{
+        font-size:0.8125rem;
+        color: #afafaf;
+    }
+}
+.likes{
+display:flex;
+    &__icon{
+        padding-right: 1rem;
+        align-items: center;
+    }
+    &__number{
+        font-size:0.8125rem;
+        color: #afafaf;   
+    }
+}
+.date{
+    color:#afafaf;
+    font-size: .8125rem;
+}
+.channel{
+    font-size:.8125rem;
+}
